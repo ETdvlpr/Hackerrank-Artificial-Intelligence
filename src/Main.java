@@ -1,4 +1,4 @@
-import bot_saves_princess.Solver;
+import bot_clean.Solver;
 
 /**
  * 
@@ -8,6 +8,10 @@ import bot_saves_princess.Solver;
 public class Main {
 	public static void main(String[] args) {
 		Solver sol = new Solver();
-		sol.solve();
+		try {
+			sol.solve();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
 	}
 }
